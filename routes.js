@@ -22,6 +22,9 @@ import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
 
+import MeuPerfil from './src/screens/MeuPerfil';
+import Home from './src/screens/Home';
+
 import theme from './src/theme';
 import { Block, Icon, Text } from 'galio-framework';
 
@@ -132,6 +135,20 @@ const screens = {
     screen: OrderConfirmed,
     navigationOptions: {
       drawerLabel: 'Order Confirmed',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  MeuPerfil: {
+    screen: MeuPerfil,
+    navigationOptions: {
+      drawerLabel: 'Meu Perfil',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      drawerLabel: 'Home',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
