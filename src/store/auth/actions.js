@@ -10,9 +10,9 @@ export const logout = () => dispatch => {
     })
 }
 
-export const login = (email, senha) => async dispatch => {
+export const login = (email, password) => async dispatch => {
     try{
-        const userData = await AuthService.login(email, senha);
+        const userData = await AuthService.login(email, password);
 
         return dispatch({
             type: SET_USER_DATA,
