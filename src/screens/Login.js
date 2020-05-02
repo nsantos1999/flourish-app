@@ -28,7 +28,7 @@ const Login = ({
     setUser({...user, [name]: value });
   }
 
-  const handleLogin = () => {
+  const handleLogin = async() => {
     try{
       const { email, password } = user;
       await dispatch(authActions.login(email, password));

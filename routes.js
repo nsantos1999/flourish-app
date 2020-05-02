@@ -87,13 +87,13 @@ MenuIcon.propTypes = {
 };
 
 const screens = {
-  Home: {
-    screen: Components,
-    navigationOptions: {
-      drawerLabel: 'Components',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+  // Components: {
+  //   screen: Components,
+  //   navigationOptions: {
+  //     drawerLabel: 'Components',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
   Cards: {
     screen: Cards,
     navigationOptions: {
