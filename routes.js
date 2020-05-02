@@ -21,6 +21,7 @@ import Dashboard from './src/screens/Dashboard';
 import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
+import Apresentation from './src/screens/Apresentation';
 
 import MeuPerfil from './src/screens/MeuPerfil';
 import Home from './src/screens/Home';
@@ -94,61 +95,68 @@ const screens = {
   //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
   //   },
   // },
-  Cards: {
-    screen: Cards,
+  // Cards: {
+  //   screen: Cards,
+  //   navigationOptions: {
+  //     drawerLabel: 'Cards',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Article: {
+  //   screen: Article,
+  //   navigationOptions: {
+  //     drawerLabel: 'Article Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // ArticleCover: {
+  //   screen: ArticleCover,
+  //   navigationOptions: {
+  //     drawerLabel: 'Article Cover',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // /*
+  // Dashboard: {
+  //   screen: Dashboard,
+  //   navigationOptions: {
+  //     drawerLabel: 'Dashboard screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // */
+  // News: {
+  //   screen: News,
+  //   navigationOptions: {
+  //     drawerLabel: 'News Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // OrderConfirmed: {
+  //   screen: OrderConfirmed,
+  //   navigationOptions: {
+  //     drawerLabel: 'Order Confirmed',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // MeuPerfil: {
+  //   screen: MeuPerfil,
+  //   navigationOptions: {
+  //     drawerLabel: 'Meu Perfil',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  // Home: {
+  //   screen: Home,
+  //   navigationOptions: {
+  //     drawerLabel: 'Home',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  Apresentation: {
+    screen: Apresentation,
     navigationOptions: {
-      drawerLabel: 'Cards',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Article: {
-    screen: Article,
-    navigationOptions: {
-      drawerLabel: 'Article Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  ArticleCover: {
-    screen: ArticleCover,
-    navigationOptions: {
-      drawerLabel: 'Article Cover',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  /*
-  Dashboard: {
-    screen: Dashboard,
-    navigationOptions: {
-      drawerLabel: 'Dashboard screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  */
-  News: {
-    screen: News,
-    navigationOptions: {
-      drawerLabel: 'News Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  OrderConfirmed: {
-    screen: OrderConfirmed,
-    navigationOptions: {
-      drawerLabel: 'Order Confirmed',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  MeuPerfil: {
-    screen: MeuPerfil,
-    navigationOptions: {
-      drawerLabel: 'Meu Perfil',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
-  Home: {
-    screen: Home,
-    navigationOptions: {
-      drawerLabel: 'Home',
+      drawerLabel: 'Apresentação',
       drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
     },
   },
