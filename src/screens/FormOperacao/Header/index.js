@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet } from 'react-native'
+import React, {useState, useRef, useEffect} from 'react'
+import { StyleSheet, Text, TextInput } from 'react-native'
 import { useSelector } from 'react-redux'
 import {Gravatar} from 'react-native-gravatar';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -20,9 +20,8 @@ import {
     TextSaldoDescription,
 } from './styles';
 
-import {
-    Input, 
-} from 'galio-framework';
+import { Input } from 'react-native-elements';
+
 
 import theme from '../../../theme';
 
@@ -35,6 +34,9 @@ const Header = ({
 
     const [ editing, setEditing ] = useState(false);
 
+    const [ resultRef, serResultRef ] = useState(0);
+
+
     return (
         <Container backgroundColor={color}>
             <StatusBar hidden={false} backgroundColor={color} barStyle="light-content"/>
@@ -44,11 +46,15 @@ const Header = ({
             {
                 editing 
                 ?
-                <Input
-                    rounded
-                    placeholder="Valor"
+                <TextInput
+                    // label='Descrição'
+                    type="number"
                     value={valor}
-                    onChangeText={valor => setValor(valor)}
+                    placeholder='Adicione um valor'
+                    onBlur={() => setEditing(false)}
+                    inputStyle={{fontSize: 15}}
+                    style={{color:theme.COLORS.WHITE}}
+                    onChangeText={value => setValor(value)}
                 />
                 :
                 <TextSaldo onPress={() => setEditing(true)}>{valor ? `R$ ${valor}` : "Nenhum valor"}</TextSaldo>
