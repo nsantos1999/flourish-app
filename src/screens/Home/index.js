@@ -103,8 +103,6 @@ const Home = ({
     const [ tipoGasto, setTipoGasto ] = useState(1);
 
     const data = tipoGasto == 1 ? dataCredito : dataDebito;
-
-    console.log(data);
     
     const resumoMes = () => {
         const creditoDebito = () => (

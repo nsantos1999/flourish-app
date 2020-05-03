@@ -8,6 +8,8 @@ import Modal from 'react-native-modal';
 
 import DatePicker from 'react-native-datepicker';
 
+import Header from './Header';
+
 import {
     Container,
     InputContainer,
@@ -29,11 +31,15 @@ const index = () => {
     const [ data, setData ] = useState('');
     const [ dataRepitirAte, setDataRepetirAte ] = useState('');
     const [ observacao, setObservacao ] = useState('');
-
+    const [ valor, setValor ] = useState(0);
     const [ modalVisible, setModalVisible ] = useState(false);
 
     return (
         <>
+        <Header 
+            valor={valor}
+            setValor={setValor}
+        />
         <Container>
             <InputContainer>
                 <InputDescription>Descrição</InputDescription>

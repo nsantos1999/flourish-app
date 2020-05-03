@@ -102,9 +102,9 @@ export default function StackNavigation({ navigation }) {
                         }}
                     />
                     <Stack.Screen name="FormOperacao" component={FormOperacao} 
-                        // options={{
-                        //     header: () => null,
-                        // }}
+                        options={{
+                            header: () => null,
+                        }}
                     />
                     
                     

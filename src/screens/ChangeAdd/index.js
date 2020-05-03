@@ -26,7 +26,16 @@ const ICONS_SIZE = 80;
 const ChangeAdd = ({
     navigation
 }) => {
-    navigation.push('FormOperacao');
+    useEffect(() => {
+        const unsubscribe = navigation.addListener('tabPress', e => {
+            e.preventDefault();
+            console.log("Tab PRESS");
+            navigation.push('FormOperacao');
+        });
+    
+        return unsubscribe;
+    }, [navigation]);
+    
     return (
         <Container>
             <Row>

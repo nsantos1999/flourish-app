@@ -10,7 +10,7 @@ const COLORS = {
   PRIMARY: '#77C054',
   PRIMARY_DARK: '#4f8038',
   INFO: '#1232FF',
-  ERROR: '#FE2472',
+  ERROR: '#f03434',
   WARNING: '#FF9C09',
   SUCCESS: '#45DF31',
   TRANSPARENT: 'transparent',
