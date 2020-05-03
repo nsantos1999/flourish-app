@@ -12,6 +12,7 @@ export const DescriptionContainer = styled.View`
     flex: 7;
     backgroundColor: ${theme.COLORS.PRIMARY};
     marginBottom: 10;
+    padding:30px
 `
 
 export const ButtonsContainer = styled.View`
@@ -37,10 +38,10 @@ export const AnimationContainer = styled.View`
 export const TextDescription = styled.Text`
     color: ${theme.COLORS.WHITE}
     fontSize: 25
-    padding:20px
 `;
 export const DescriptionInformations = styled.View`
     flexDirection: row;
     flex:1;
-    padding:20px
+    paddingTop:20px
+    paddingRight:20px
 `;

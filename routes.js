@@ -16,12 +16,12 @@ import Components from './src/screens/Components';
 import Login from './src/screens/Login';
 import News from './src/screens/News';
 import OrderConfirmed from './src/screens/OrderConfirmed';
-import Presentation from './src/screens/Presentation';
 import Dashboard from './src/screens/Dashboard';
 import Register from './src/screens/Register';
 import Registerv2 from './src/screens/Registerv2';
 import Grid from './src/screens/Grid';
-import Apresentation from './src/screens/Apresentation';
+import Presentation from './src/screens/Presentation';
+import SignUp from './src/screens/SignUp';
 
 import MeuPerfil from './src/screens/MeuPerfil';
 import Home from './src/screens/Home';
@@ -153,21 +153,15 @@ const screens = {
   //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
   //   },
   // },
-  Apresentation: {
-    screen: Apresentation,
-    navigationOptions: {
-      drawerLabel: 'Apresentação',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+  // Presentation: {
+  //   screen: Presentation,
+  //   navigationOptions: {
+  //     drawerLabel: 'Apresentação',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
   /*
-  Presentation: {
-    screen: Presentation,
-    navigationOptions: {
-      drawerLabel: 'Presentation Screen',
-      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
-    },
-  },
+  
   Login: {
     screen: Login,
     navigationOptions: {
@@ -197,6 +191,20 @@ const screens = {
     },
   },
   */
+  // Presentation: {
+  //   screen: Presentation,
+  //   navigationOptions: {
+  //     drawerLabel: 'Presentation Screen',
+  //     drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+  //   },
+  // },
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: {
+      drawerLabel: 'SignUp Screen',
+      drawerIcon: props => <MenuIcon name="flag" family="font-awesome" focused={props.focused} />,
+    },
+  },
 };
 
 const options = {

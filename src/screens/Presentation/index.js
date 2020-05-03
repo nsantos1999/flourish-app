@@ -13,23 +13,24 @@ import {
     Container,
     DescriptionContainer,
     ButtonsContainer,
-    Logo,
     AnimationContainer,
     DescriptionInformations,
     TextDescription
- } from './styles';
+} from './styles';
+
+import Logo from '../../components/Logo';
 
 import LottieView from 'lottie-react-native';
 
 import theme from '../../theme';
 
-const Apresentation = () => {
+const Apresentation = ({
+    navigation
+}) => {
     return (
         <Container>
             <DescriptionContainer>
-                <Logo
-                    source={require('../../../public/images/flourish.png')}
-                />
+                <Logo />
                 <DescriptionInformations>
                     <TextDescription>
                         Inovando a forma que seu dinheiro é administrado!
@@ -51,7 +52,7 @@ const Apresentation = () => {
                 <Button round style={{ backgroundColor: theme.COLORS.PRIMARY }} >
                     Ja tenho uma conta
                 </Button>
-                <Button round style={{ backgroundColor: theme.COLORS.WHITE}} textStyle={{ color: theme.COLORS.PRIMARY }}>
+                <Button round style={{ backgroundColor: theme.COLORS.WHITE}} textStyle={{ color: theme.COLORS.PRIMARY }} onPress={() => navigation.push("SignUp") }>
                     Ainda não sou registrado
                 </Button>
             </ButtonsContainer>

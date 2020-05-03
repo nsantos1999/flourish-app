@@ -10,7 +10,7 @@ export const logout = () => dispatch => {
     })
 }
 
-export const login = (email, password) => async dispatch => {
+export const login = (email = "admin@admin", password = "1234") => async dispatch => {
     try{
         const userData = await AuthService.login(email, password);
 
