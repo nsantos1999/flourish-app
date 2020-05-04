@@ -10,5 +10,7 @@ export const Container = styled.View`
 `;
 
 export const Logo = styled.Image`
-    
+    width: 350;
+    height: 350;
+    resizeMode: stretch;
 `;

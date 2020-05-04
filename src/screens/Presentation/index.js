@@ -38,7 +38,7 @@ const Apresentation = ({
                     <AnimationContainer>
                         <LottieView 
                             source={require('../../../public/animations/super_finance.json')} 
-                            style={{width: 250}}
+                            style={{width: 220}}
                             autoPlay 
                             loop={false} 
                             // onAnimationFinish={onAnimationFinish}

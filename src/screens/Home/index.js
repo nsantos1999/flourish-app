@@ -158,7 +158,7 @@ const Home = ({
         return (
             <>
                 <Title>Resumo do Mês</Title>
-                <Card>
+                <Card onPress={() => navigation.push('Extrato')}>
                     {creditoDebito()}
 
                     {renda()}
@@ -195,7 +195,9 @@ const Home = ({
 
     return (
         <>
-        <Header />
+        <Header 
+            navigation={navigation}
+        />
         <Container>
             <ScrollView 
                 style={{ flex: 1 }}

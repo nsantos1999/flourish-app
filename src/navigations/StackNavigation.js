@@ -7,7 +7,6 @@ import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/
 
 import React, { useState } from 'react';
 
-
 import { NavigationContainer } from '@react-navigation/native';
 import { useSelector } from 'react-redux'
 import theme from '../theme';
@@ -18,6 +17,7 @@ import Presentation from '../screens/Presentation';
 import SignUp from '../screens/SignUp';
 import BottomTabsNavigation  from './BottomTabsNavigation';
 import FormOperacao  from '../screens/FormOperacao';
+import Extrato  from '../screens/Extrato';
 
 import Splash from '../screens/Splash';
 
@@ -102,6 +102,11 @@ export default function StackNavigation({ navigation }) {
                         }}
                     />
                     <Stack.Screen name="FormOperacao" component={FormOperacao} 
+                        options={{
+                            header: () => null,
+                        }}
+                    />
+                    <Stack.Screen name="Extrato" component={Extrato} 
                         options={{
                             header: () => null,
                         }}

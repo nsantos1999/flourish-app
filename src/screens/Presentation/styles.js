@@ -11,8 +11,10 @@ export const Container = styled.View`
 export const DescriptionContainer = styled.View`
     flex: 7;
     backgroundColor: ${theme.COLORS.PRIMARY};
-    marginBottom: 10;
-    padding:30px
+    marginBottom: 10px;
+    paddingBottom:30px
+    paddingLeft:30px
+    paddingRight:30px
 `
 
 export const ButtonsContainer = styled.View`
@@ -21,27 +23,25 @@ export const ButtonsContainer = styled.View`
     justifyContent: space-around;
 `
 export const Logo = styled.Image`
-    width: 200;
-    height: 50;
+    width: 200px;
+    height: 50px;
     resizeMode: stretch;
-    marginTop: 30
-    marginLeft: 30
+    marginTop: 30px;
+    marginLeft: 30px;
 `
 export const AnimationContainer = styled.View`
-    flexDirection: row;
     flex:1;
-    justifyContent:flex-end;
     alignItems:flex-end;
-    padding: 10px;
 `;
 
 export const TextDescription = styled.Text`
     color: ${theme.COLORS.WHITE}
-    fontSize: 25
+    fontSize: 22;
+    width: 200px;
 `;
 export const DescriptionInformations = styled.View`
     flexDirection: row;
+    justifyContent:space-between;
     flex:1;
-    paddingTop:20px
-    paddingRight:20px
+    
 `;

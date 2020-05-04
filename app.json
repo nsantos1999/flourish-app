@@ -11,9 +11,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./public/images/utopia.png",
     "splash": {
-      "image": "./public/images/flourish.png",
+      "image": "./public/images/utopia.png",
       "resizeMode": "stretch",
       "backgroundColor": "#77C054"
     },

@@ -9,7 +9,7 @@ const Splash = () => {
     return (
         <Container>
             <Logo
-                source={require('../../../public/images/flourish.png')}
+                source={require('../../../public/images/utopia.png')}
             />
         </Container>
     )

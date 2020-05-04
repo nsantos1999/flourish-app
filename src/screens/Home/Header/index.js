@@ -18,7 +18,9 @@ import {
 
 import theme from '../../../theme';
 
-const Header = () => {
+const Header = ({
+    navigation
+}) => {
     const auth = useSelector(({ auth }) => auth);
 
     console.log(auth);
@@ -45,7 +47,7 @@ const Header = () => {
                     </LevelContainer>
                 </NomeContainer>
             </InfoContainer>
-            <SaldoContainer>
+            <SaldoContainer onPress={() => navigation.push("Extrato")}>
                 <TextSaldo>R$ {auth.saldo}</TextSaldo>
                 <TextSaldoDescription>SALDO ATUAL</TextSaldoDescription>
             </SaldoContainer>

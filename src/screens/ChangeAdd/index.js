@@ -10,16 +10,7 @@ import {
 
 import theme from '../../theme';
 
-const cards = [
-    {
-        icon: 'wallet',
-        onClick: () => console.log("Wallet")
-    },
-    {
-        icon: 'card',
-        onClick: () => console.log("Wallet")
-    },
-]
+import FormOperacao from '../FormOperacao';
 
 const ICONS_SIZE = 80;
 
@@ -29,14 +20,17 @@ const ChangeAdd = ({
     useEffect(() => {
         const unsubscribe = navigation.addListener('tabPress', e => {
             e.preventDefault();
-            console.log("Tab PRESS");
             navigation.push('FormOperacao');
         });
+        // navigation.push('FormOperacao');
     
         return unsubscribe;
     }, [navigation]);
     
     return (
+        // <FormOperacao 
+        //     navigation={navigation}
+        // />
         <Container>
             <Row>
                 <Card

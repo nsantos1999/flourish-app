@@ -30,7 +30,7 @@ export const TextLevel = styled.Text`
     marginLeft: 5px;
 `;
 
-export const SaldoContainer = styled.View`
+export const SaldoContainer = styled.TouchableOpacity`
     flex:1
     alignItems:flex-end;
 `;
@@ -42,8 +42,10 @@ export const NomeContainer = styled.View`
 export const TextSaldo = styled.Text`
     color: ${theme.COLORS.WHITE};
     fontSize: 18;
+    fontWeight: bold;
 `;
 export const TextSaldoDescription = styled.Text`
     color: ${theme.COLORS.WHITE};
     fontSize: 10;
+    fontWeight: bold;
 `;

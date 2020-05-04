@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
@@ -24,7 +24,7 @@ const AddButton = ({
                     borderRadius:100,
                     // elevation: 10,
                 }}
-                onPress={() => navigation.push()}
+                onPress={() => navigation.push("FormOperacao")}
             >
                 <Icon name="plus" color={theme.COLORS.WHITE} size={30} />
             </TouchableOpacity>
