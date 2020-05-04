@@ -13,9 +13,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#FE2472"
+      "image": "./public/images/flourish.png",
+      "resizeMode": "stretch",
+      "backgroundColor": "#77C054"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

@@ -26,19 +26,29 @@ import FloatingButton from '../../components/FloatingButton';
 
 import theme from '../../theme';
 
-const index = () => {
+const index = ({
+    navigation
+}) => {
     const [ tipoRepeticao, setTipoRepeticao ] = useState(0);
     const [ data, setData ] = useState('');
     const [ dataRepitirAte, setDataRepetirAte ] = useState('');
     const [ observacao, setObservacao ] = useState('');
     const [ valor, setValor ] = useState(0);
     const [ modalVisible, setModalVisible ] = useState(false);
+    const [ tipoOperacao, setTipoOperacao ] = useState('C');
+
+    const toggleTipo = () => {
+        setTipoOperacao(tipoOperacao == 'C' ? 'D' : 'C');
+    }
 
     return (
         <>
         <Header 
             valor={valor}
             setValor={setValor}
+            toggleTipo={toggleTipo}
+            navigation={navigation}
+            tipoOperacao={tipoOperacao}
         />
         <Container>
             <InputContainer>

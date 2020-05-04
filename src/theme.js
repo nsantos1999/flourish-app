@@ -27,7 +27,7 @@ const COLORS = {
 };
 
 const SIZES = {
-  BASE: 16,
+  BASE: 24,
   FONT: 16,
   OPACITY: 0.8,
 };

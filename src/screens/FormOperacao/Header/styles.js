@@ -49,3 +49,8 @@ export const TextSaldoDescription = styled.Text`
     color: ${theme.COLORS.WHITE};
     fontSize: 10;
 `;
+
+export const ButtonsGroup = styled.View`
+    flexDirection: row;
+    
+`;
