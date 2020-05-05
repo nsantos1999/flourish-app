@@ -14,6 +14,7 @@ import * as StorageService from '../services/StorageService';
 
 //Components
 import Presentation from '../screens/Presentation';
+import EnterAccount from '../screens/EnterAccount';
 import SignUp from '../screens/SignUp';
 import BottomTabsNavigation  from './BottomTabsNavigation';
 import FormOperacao  from '../screens/FormOperacao';
@@ -78,6 +79,13 @@ export default function StackNavigation({ navigation }) {
                 <Stack.Screen
                     name="Presentation"
                     component={Presentation}
+                    options={{
+                        header: () => null,
+                    }}
+                />
+                  <Stack.Screen
+                    name="EnterAccount"
+                    component={EnterAccount}
                     options={{
                         header: () => null,
                     }}

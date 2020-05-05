@@ -49,7 +49,7 @@ const Apresentation = ({
                 
             </DescriptionContainer>
             <ButtonsContainer>
-                <Button round style={{ backgroundColor: theme.COLORS.PRIMARY }} >
+                <Button round style={{ backgroundColor: theme.COLORS.PRIMARY }} onPress={() => navigation.push("EnterAccount")}>
                     Ja tenho uma conta
                 </Button>
                 <Button round style={{ backgroundColor: theme.COLORS.WHITE}} textStyle={{ color: theme.COLORS.PRIMARY }} onPress={() => navigation.push("SignUp") }>
