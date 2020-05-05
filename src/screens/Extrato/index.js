@@ -23,6 +23,7 @@ import {
 } from 'galio-framework';
 
 import moment from 'moment';
+import Header from './Header';
 
 import 'moment/locale/pt-br'  // without this line it didn't work
 moment.locale('pt-BR');
@@ -84,60 +85,6 @@ const lancamentos = [
 
 ]
 
-const chartConfig={
-    backgroundColor: "#e26a00",
-    backgroundGradientFrom: "#fb8c00",
-    backgroundGradientTo: "#ffa726",
-    decimalPlaces: 2, // optional, defaults to 2dp
-    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-    labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-    style: {
-        borderRadius: 16
-    },
-    propsForDots: {
-        r: "6",
-        strokeWidth: "2",
-        stroke: "#ffa726"
-    }
-}
-
-const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-    datasets: [
-        {
-          data: [20, 45, 28, 80, 99, 43],
-        },
-    ],
-};
-
-
-const screenWidth = Dimensions.get("window").width;
-
-const dataDebito = [
-    {
-      name: "Viagens",
-      gasto: 920,
-      color: "#4a7a35",
-      legendFontColor: theme.COLORS.WHITE,
-      legendFontSize: 10
-    },
-    {
-      name: "Comida",
-      gasto: 52,
-      color: "#3e662c",
-      legendFontColor: theme.COLORS.WHITE,
-      legendFontSize: 10
-    },
-    {
-      name: "Gasolina",
-      gasto: 25,
-      color: "#2d4a20",
-      legendFontColor: theme.COLORS.WHITE,
-      legendFontSize: 10
-    }
-];
-
-import Header from './Header';
 
 const Extrato = ({
     navigation
@@ -176,15 +123,6 @@ const Extrato = ({
                             size={20}
                         />
                     </GraphContent>
-                    {/* <BarChart
-                        style={{ flex:1 }}
-                        data={data}
-                        width={screenWidth}
-                        height={220}
-                        yAxisLabel="$"
-                        chartConfig={chartConfig}
-                        verticalLabelRotation={30}
-                    /> */}
                 </CardContent>
                 <CardContent row>
                     <View>
