@@ -17,6 +17,7 @@ import {
 } from './styles';
 
 import theme from '../../../theme';
+import toReal from '../../../helpers/toReal';
 
 const Header = ({
     navigation
@@ -48,7 +49,7 @@ const Header = ({
                 </NomeContainer>
             </InfoContainer>
             <SaldoContainer onPress={() => navigation.push("Extrato")}>
-                <TextSaldo>R$ {auth.saldo}</TextSaldo>
+                <TextSaldo>{toReal(auth.saldo)}</TextSaldo>
                 <TextSaldoDescription>SALDO ATUAL</TextSaldoDescription>
             </SaldoContainer>
         </Container>

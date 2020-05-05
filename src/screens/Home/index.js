@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import {
     StyleSheet,
     ScrollView,
-    Dimensions
+    Dimensions,
+    Picker
 } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
@@ -32,6 +33,8 @@ import {
 
 import { ProgressBar } from 'react-native-paper';
 
+import toReal from '../../helpers/toReal';
+
 import theme from '../../theme';
 
 const chartConfig={
@@ -55,14 +58,14 @@ const dataCredito = [
     {
       name: "Comida",
       gasto: 125,
-      color: "#3e662c",
+      color: theme.COLORS.ERROR,
       legendFontColor: theme.COLORS.WHITE,
       legendFontSize: 10
     },
     {
       name: "Gasolina",
       gasto: 453,
-      color: "#2d4a20",
+      color: theme.COLORS.YELLOW,
       legendFontColor: theme.COLORS.WHITE,
       legendFontSize: 10
     }
@@ -71,21 +74,21 @@ const dataDebito = [
     {
       name: "Viagens",
       gasto: 920,
-      color: "#4a7a35",
+      color: theme.COLORS.PRIMARY_DARK,
       legendFontColor: theme.COLORS.WHITE,
       legendFontSize: 10
     },
     {
       name: "Comida",
       gasto: 52,
-      color: "#3e662c",
+      color: theme.COLORS.ERROR,
       legendFontColor: theme.COLORS.WHITE,
       legendFontSize: 10
     },
     {
       name: "Gasolina",
       gasto: 25,
-      color: "#2d4a20",
+      color: theme.COLORS.INFO,
       legendFontColor: theme.COLORS.WHITE,
       legendFontSize: 10
     }
@@ -108,28 +111,16 @@ const Home = ({
         const creditoDebito = () => (
             <>
                 {/* <CardTitle>Crédito ou Débito?</CardTitle> */}
-                <RNPickerSelect
-                    onValueChange={(value) => setTipoGasto(value)}
-                    items={[
-                        { label: 'Crédito', value: 1, color: theme.COLORS.WHITE },
-                        { label: 'Débito', value: 2, color: theme.COLORS.WHITE},
-                    ]}
-                    value={tipoGasto}
-                    useNativeAndroidPickerStyle={true}
-                    style={{
-                        inputIOS: {
-                            color: 'white',
-                            paddingTop: 13,
-                            paddingHorizontal: 10,
-                            paddingBottom: 12,
-                        },
-                        inputAndroid: {
-                            color: 'white',
-                        },
-                        placeholderColor: 'white',
-                        underline: { borderTopWidth: 0 },
+                <Picker
+                    selectedValue={tipoGasto}
+                    style={{ height: 50, width: '100%', color: 'white' }}
+                    onValueChange={(value) => {
+                        setTipoGasto(value)
                     }}
-                />
+                >
+                    <Picker.Item label="Crédito" value="1" />
+                    <Picker.Item label="Débito" value="2" />
+                </Picker>
             </>
         );
         const renda = () => (
@@ -143,7 +134,7 @@ const Home = ({
         );
         const gastos = () => (
             <>
-            <CardTitle>Gastos - R${data.reduce((sum, gasto) => sum+gasto.gasto, 0)}</CardTitle>
+            <CardTitle>Gastos - {toReal(data.reduce((sum, gasto) => sum+gasto.gasto, 0))}</CardTitle>
             <PieChart
                 data={data}
                 width={screenWidth}

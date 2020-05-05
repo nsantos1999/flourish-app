@@ -20,10 +20,20 @@ import Card from './Card';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import {
+    Button,
+} from 'galio-framework';
+
+import moment from 'moment';
+
+import 'moment/locale/pt-br'  // without this line it didn't work
+moment.locale('pt-BR');
+
+import toReal from '../../helpers/toReal';
 
 const lancamentos = [
     {
-        date: '10/01/2020',
+        date: moment('10/01/2020','DD/MM/YYYY').format('LL'),
         values: [
             {
                 name: 'Netflix',
@@ -40,7 +50,7 @@ const lancamentos = [
         ]
     },
     {
-        date: '15/01/2020',
+        date: moment('15/01/2020','DD/MM/YYYY').format('LL'),
         values: [
             {
                 name: 'Pagamento',
@@ -57,7 +67,7 @@ const lancamentos = [
         ]
     },
     {
-        date: '20/01/2020',
+        date: moment('20/01/2020','DD/MM/YYYY').format('LL'),
         values: [
             {
                 name: 'Hipermercado Carrefour',
@@ -138,13 +148,22 @@ const Extrato = ({
     const graphs = () => {
         return (
             <CardGraph>
-                <CardContent>
+                <CardContent row>
+                    <Button
+                        onlyIcon
+                        icon="remove-circle"
+                        iconFamily="material-icons"
+                        iconSize={20}
+                        iconColor={theme.COLORS.WHITE}
+                        color="transparent"
+                        onPress={() => console.log("Pagos")}
+                    />
                     <View>
                         <TextExtratoCardGraph>
                             Recebido
                         </TextExtratoCardGraph>
                         <TextExtratoCardGraph>
-                            R$1000
+                            {toReal(1000)}
                         </TextExtratoCardGraph>
                     </View>
                 </CardContent>
@@ -169,15 +188,24 @@ const Extrato = ({
                         verticalLabelRotation={30}
                     /> */}
                 </CardContent>
-                <CardContent>
+                <CardContent row>
                     <View>
                         <TextExtratoCardGraph>
                             Pagos
                         </TextExtratoCardGraph>
                         <TextExtratoCardGraph>
-                            R$192.74
+                            {toReal(192.74)}
                         </TextExtratoCardGraph>
                     </View>
+                    <Button
+                        onlyIcon
+                        icon="add-circle"
+                        iconFamily="material-icons"
+                        iconSize={20}
+                        iconColor={theme.COLORS.WHITE}
+                        color="transparent"
+                        onPress={() => console.log("Pagos")}
+                    />
                 </CardContent>
             </CardGraph>
         )
@@ -208,7 +236,7 @@ const Extrato = ({
                                             }
                                             <TextExtratoCard>{value.name}</TextExtratoCard>
                                         </View>
-                                        <TextExtratoCard bold>{value.value < 0 && '-'}R${value.value < 0 ? value.value * -1: value.value}</TextExtratoCard>
+                                        <TextExtratoCard bold style={{color:value.value < 0 ? theme.COLORS.ERROR : theme.COLORS.PRIMARY}}>{value.value < 0 ? '-' : '+'}{value.value < 0 ? toReal(value.value * -1): toReal(value.value)}</TextExtratoCard>
                                     </CardRow>
                                 ))
                             }

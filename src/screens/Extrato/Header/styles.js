@@ -22,3 +22,11 @@ export const TextSaldo = styled.Text`
     color: ${theme.COLORS.WHITE}
     fontWeight: bold;
 `;
+export const TextSync = styled.Text`
+    fontSize: 10;
+    color: ${theme.COLORS.WHITE}
+`;
+export const SyncContainer = styled.Text`
+    flexDirection: row;
+    justifyContent:space-around;
+`;

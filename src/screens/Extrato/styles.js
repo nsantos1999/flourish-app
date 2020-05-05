@@ -19,7 +19,10 @@ export const CardGraph = styled.View`
 `;
 
 export const CardContent = styled.View`
-    justifyContent:center;
+    justifyContent:${props => props.row ? 'space-between' : 'center'};
+    
+    ${props => props.row ? 'alignItems:center' : ''};
+    flexDirection: ${props => props.row ? 'row' : 'column'};
 `;
 
 export const GraphContent = styled.View`
@@ -51,10 +54,11 @@ export const CardRow = styled.View`
 
 export const TextExtratoCard = styled.Text`
     fontSize: 15;
-    fontWeight: ${props => props.bold ? 'bold': 'normal'}
+    fontWeight: ${props => props.bold ? 'bold': 'normal'};
+
 `;
 export const TextExtratoCardGraph = styled.Text`
-    fontSize: 18;
+    fontSize: 15;
     fontWeight: bold;
     color: ${theme.COLORS.WHITE};
 `;
