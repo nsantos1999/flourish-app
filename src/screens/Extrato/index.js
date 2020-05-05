@@ -14,8 +14,6 @@ import {
 
 import theme from '../../theme';
 
-import { BarChart, PieChart } from 'react-native-chart-kit';
-
 import Card from './Card';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';

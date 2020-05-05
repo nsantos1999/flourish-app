@@ -196,7 +196,9 @@ const Home = ({
             >
                 {resumoMes()}
                 {nivel()}
-                {/* <Button round onPress={() => dispatch(authActions.logout())}>Logout</Button> */}
+
+                {/* Botão abaixo utilizado temporariamente enquanto n existe página de login. */}
+                <Button style={{ marginTop:10 }} round onPress={() => dispatch(authActions.logout())}>Logout</Button>
             </ScrollView>
         </Container>
         </>
